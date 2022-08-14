@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-14T14:42:12Z" name="Suite" finished-at="2022-08-14T14:43:54Z" duration-ms="102495">
+    <groups>
+    </groups>
+    <test started-at="2022-08-14T14:42:12Z" name="home" finished-at="2022-08-14T14:43:35Z" duration-ms="83251">
+      <class name="test.HomeTest">
+        <test-method is-config="true" signature="start()[pri:0, instance:test.HomeTest@5443d039]" started-at="2022-08-14T14:42:12Z" name="start" finished-at="2022-08-14T14:43:01Z" duration-ms="49398" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method signature="titleVerify()[pri:0, instance:test.HomeTest@5443d039]" started-at="2022-08-14T14:43:01Z" name="titleVerify" finished-at="2022-08-14T14:43:20Z" duration-ms="18975" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleVerify -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.HomeTest@5443d039]" started-at="2022-08-14T14:43:20Z" name="tearDown" finished-at="2022-08-14T14:43:35Z" duration-ms="14821" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.HomeTest -->
+    </test> <!-- home -->
+    <test started-at="2022-08-14T14:42:12Z" name="login" finished-at="2022-08-14T14:43:54Z" duration-ms="102472">
+      <class name="test.logintest">
+        <test-method is-config="true" signature="start()[pri:0, instance:test.logintest@40238dd0]" started-at="2022-08-14T14:42:12Z" name="start" finished-at="2022-08-14T14:43:01Z" duration-ms="49372" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method signature="login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.logintest@40238dd0]" started-at="2022-08-14T14:43:01Z" name="login" data-provider="userData" finished-at="2022-08-14T14:43:34Z" duration-ms="32159" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[monkey@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[monkey]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[sucessfull]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.logintest@40238dd0]" started-at="2022-08-14T14:43:34Z" name="login" data-provider="userData" finished-at="2022-08-14T14:43:41Z" duration-ms="7704" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[monkey@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[donkey]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[unsucessfull]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.logintest@40238dd0]" started-at="2022-08-14T14:43:41Z" name="login" data-provider="userData" finished-at="2022-08-14T14:43:45Z" duration-ms="4039" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[donkey@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[monkey]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[unsucessful]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.logintest@40238dd0]" started-at="2022-08-14T14:43:45Z" name="login" data-provider="userData" finished-at="2022-08-14T14:43:49Z" duration-ms="4052" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[donkey@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[donkey]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[unsucessful]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.logintest@40238dd0]" started-at="2022-08-14T14:43:49Z" name="tearDown" finished-at="2022-08-14T14:43:54Z" duration-ms="5095" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.logintest -->
+    </test> <!-- login -->
+  </suite> <!-- Suite -->
+</testng-results>
