@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="Listener.listener"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="home(failed)" verbose="0">
+    <classes>
+      <class name="test.HomeTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="titleVerify"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- test.HomeTest -->
+    </classes>
+  </test> <!-- home(failed) -->
+  <test thread-count="5" parallel="tests" name="login(failed)" verbose="0">
+    <classes>
+      <class name="test.logintest">
+        <methods>
+          <include name="start"/>
+          <include name="tearDown"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- test.logintest -->
+    </classes>
+  </test> <!-- login(failed) -->
+</suite> <!-- Failed suite [Suite] -->
