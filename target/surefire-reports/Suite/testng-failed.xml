@@ -21,7 +21,7 @@
         <methods>
           <include name="start"/>
           <include name="tearDown"/>
-          <include name="login"/>
+          <include name="login" invocation-numbers="1 2 3"/>
         </methods>
       </class> <!-- test.logintest -->
     </classes>

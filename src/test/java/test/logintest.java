@@ -24,20 +24,20 @@ import pageObject.Login;
 public class logintest extends Base {
 	public WebDriver driver;
 	Logger log;
-	int i=0;
 	@Test(dataProvider = "userData")
 	public void login(String mail,String password,String expect) throws InterruptedException
 	{
-		log.info("landing the login page");
+		log.info("landing homepage page");
 		driver.get(propertyFile.getProperty("url"));
 		
 		Login login=new Login(driver);
 		Index home=new Index(driver);
 		
-		
+		log.info("click myaccount function in home page");
 		home.myAccount().click();
-	    home.myAccountOption().get(1).click();
-	    log.info("perform login function on positive and negative user credential");
+                log.info("click login");
+	        home.myAccountOption().get(1).click();
+	    log.info("page is get direct to loginpage");
 	    //to verify it entering login page or Not
 	    String loginpagetitle=driver.getTitle();
 	    log.info("check title of the login page");
@@ -46,21 +46,22 @@ public class logintest extends Base {
 		login.email().sendKeys(mail);
 		log.debug("enter password");
 		login.password().sendKeys(password);
+                log.debug("click submit button");
 		login.password().sendKeys(Keys.ENTER);
 		//login.submit();
 		if(expect.equals("sucessfull"))
 		{ 
-			log.info("username  and  password are correct. Current page is  taken to my  account page");
+			log.info("if username  and  password are correct. Current page is  taken to my  account page");
 			WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(5));
 			wait.until(ExpectedConditions.titleIs("My Account"));
 			String myTitleAct=driver.getTitle();
 			log.debug("check  login page is changed to MyAccount page");
 			Assert.assertEquals(myTitleAct,"My Account");
-			driver.manage().deleteAllCookies();
+                        driver.manage().deleteAllCookies();
 		}
 		else
 		{
-			log.info("user credientials  is wrong so it show warning");
+			log.info("user credientials  is wrong so it show warning on the same page");
 			String actualWarning=login.warning().getText();
 			String expctwarning="Warning: No match for E-Mail Address and/or Password.";
 			//if(i==1)
@@ -68,7 +69,6 @@ public class logintest extends Base {
 			//else
 				//Assert.assertEquals(actualWarning,"Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.");
 		}
-		i++;
 	}
 	
 	
@@ -76,10 +76,10 @@ public class logintest extends Base {
 	public String[][] userData()
 	{
 		String[][] data= {
-				{"monkey@gmail.com","monkey","sucessfull"},
-				{"monkey@gmail.com","donkey","unsucessfull"},
-				{"donkey@gmail.com","monkey","unsucessful"},
-				{"donkey@gmail.com","donkey","unsucessful"}
+				{"professional@gmail.com","professional","sucessfull"},
+				{"professional@gmail.com","abcd","unsucessfull"},
+				{"abcd@gmail.com","monkey","professional"},
+				{"abcd@gmail.com","xyz","unsucessful"}
 		};
 		
 		return data;
